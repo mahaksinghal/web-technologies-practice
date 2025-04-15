@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Problem Statement - 5</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <style>
+        .table1,
+        tr,
+        th {
+            border: 2px solid black;
+        }
+
+        th{
+            width: 282px;
+        }
+
+        .card {
+            height: 90vh;
+            width: 50%;
+            margin: auto;
+        }
+
+        .table1{
+            width: 110%;
+            background-color: pink;
+        }
+
+        textarea{
+            width: 250px;
+            height: 50px;
+        }
+
+        #name{
+            width: 150px;
+        }
+
+        #empcode{
+            width: 60px;
+        }
+
+        #doj{
+            width: 60px;
+            height: 25px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="card d-flex justify-content-center align-items-center mt-5">
+            <form action="" class="">
+                <table class="table1">
+                    <tr>
+                        <th><label for="name">Name</label></th>
+                        <td><input type="text" id="name" name="name" placeholder="Enter your name"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="empcode">Employee Code</label></th>
+                        <td><input type="number" id="empcode" value="empcode" name="empcode"
+                                placeholder="code"></td>
+                    </tr>
+                    <tr>
+                        <th><label>Department</label></th>
+                        <td>
+                            <input type="radio" id="admin" value="dept" name="admin">
+                            <label for="admin">ADMIN</label> <br>
+                            <input type="radio" name="hr" id="hr" value="dept">
+                            <label for="hr">HR</label> <br>
+                            <input type="radio" id="tech" name="tech" value="dept">
+                            <label for="tech">TECHNICAL</label> <br>
+                            <input type="radio" name="acc" id="acc" value="dept">
+                            <label for="acc">ACCOUNTS</label>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="doj">Date of Joining</label></th>
+                        <td>
+                            <input type="number" name="doj" id="doj" min="1" max="31" placeholder="DD"> / 
+                            <input type="number" name="doj" id="doj" min="1" max="12" placeholder="MM"> / 
+                            <input type="number" name="doj" id="doj" min="1900" max="2025" placeholder="YYYY"><br>
+                            <label for="doj">DD/MM/YYYY</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="add">Address</label></th>
+                        <td>
+                            <textarea name="add" id="add"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="prgms">Training Programs Attended</label></th>
+                        <td>
+                            <input type="checkbox" name="html" id="html" value="prgms">
+                            <label for="html">HTML/DHTML</label> <br>
+                            <input type="checkbox" name="java" id="java" value="prgms">
+                            <label for="java">JAVA</label><br>
+                            <input type="checkbox" name="cs" id="cs" value="prgms">
+                            <label for="cs">CLIENT/SERVER</label><br>
+                            <input type="checkbox" name="net" id="net" value="prgms">
+                            <label for="net">.NET</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="tg">Training Programmes need to attend</label></th>
+                        <td>
+                            <textarea name="tg" id="tg">JAVASCRIPT 
+JSTRUTS</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label>Send the information at</label></th>
+                        <td><a href="#">empinfo@patni.com</a></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

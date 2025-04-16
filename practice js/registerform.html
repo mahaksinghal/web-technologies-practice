@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="registerform_js.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="post" action="registerdata" onsubmit="return validateData()">
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" placeholder="Enter your name" required focused><br><br>
+
+        <label for="Email">Email: </label>
+        <input type="text" name="Email" id="Email"><br><br>
+
+        <label for="pass">Password: </label>
+        <input type="password" name="pass" id="pass"><br><br>
+
+        <label for="cpass">Confirm Password: </label>
+        <input type="password" name="cpass" id="cpass">
+        <p id="errPass"></p>
+
+        <label >Gender: </label>
+        <input type="radio" name="gender" id="female" value="female"><label for="female">female </label>
+        <input type="radio" name="gender" id="male" value="male"><label for="male">male</label>
+        <input type="radio" name="gender" id="others" value="others"><label for="others">others</label>
+        <p id="errGender"></p>
+
+        <label >Degree: </label>
+        <input type="radio" name="degree" id="btech" value="btech"><label for="btech">BTECH</label>
+        <input type="radio" name="degree" id="be" value="be"><label for="be">BE</label>
+        <input type="radio" name="degree" id="bpharma" value="bpharma"><label for="bpharma">B PHARMA</label>
+        <input type="radio" name="degree" id="bsc" value="bsc"><label for="bsc">BSC</label>
+        <input type="radio" name="degree" id="others1" value="others2"><label for="others1">OTHERS</label>
+        <p id="errDegree"></p>
+
+        <label >Hoobies: </label>
+        <input type="checkbox" name="hobbies" id="biking" value="biking"><label for="biking">Biking</label>
+        <input type="checkbox" name="hobbies" id="reading" value="reading"><label for="reading">Reading</label>
+        <input type="checkbox" name="hobbies" id="travelling" value="travelling"><label for="travelling">Travelling</label>
+        <input type="checkbox" name="hobbies" id="singing" value="singing"><label for="singing">Singing</label>
+        <input type="checkbox" name="hobbies" id="dancing" value="dancing"><label for="dancing">Dancing</label>
+        <input type="checkbox" name="hobbies" id="painting" value="painting"><label for="painting">Painting</label>
+        <input type="checkbox" name="hobbies" id="others2" value="others2"><label for="others2">Others</label>
+        <p id="errHobbies"></p>
+
+        <label >City: </label>
+        <select name="city" id="city">
+            <option value="test">----select one----</option>
+            <option value="pune">Pune</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="lucknow">Lucknow</option>
+            <option value="banglore">Banglore</option>
+        </select>
+        <p id="errCity"></p>
+
+
+        <button type="submit" value="submit" id="submit" name="btn">Submit</button>
+
+        <br><br>
+
+        <button type="reset" value="reset" id="reset" name="btn">Reset</button>
+
+
+
+
+    </form>
+</body>
+</html>
+

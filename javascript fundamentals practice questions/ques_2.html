@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 2</title>
+
+    <script>
+
+        function printString() {
+            var str = document.getElementById("string").value;
+            var num = parseInt(document.getElementById("number").value);
+            var result = "";
+            if (num > 0 && str.length > 0 && str.trim().length > 0) {
+                for (let i = 0; i < num; i++) {
+                    result += str + "<br>";
+                }
+                document.getElementById("result").innerHTML = result;
+            }
+
+            else
+                document.getElementById("result").innerHTML = "Please enter a valid string and number";
+        }
+
+    </script>
+</head>
+
+<body>
+    <p>Accept an integer value and a message from user and print that many number of times</p>
+    <label for="string">Enter the string</label>
+    <input type="text" name="string" id="string" placeholder="Enter the string"><br><br>
+
+    <label for="number">Enter the number of times to print the string</label>
+    <input type="number" name="number" id="number"><br><br>
+
+    <button type="button" onclick="printString()">Print</button>
+
+    <div id="result"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 1</title>
+
+    <script>
+        function findMax() {
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+            var num3 = parseInt(document.getElementById("num3").value);
+            var max = 0;
+            if (num1 > 0 && num2 > 0 && num3 > 0) {
+                if (num1 > num2 && num1 > num3)
+                    max = num1;
+                else if (num2 > num1 && num2 > num3)
+                    max = num2;
+                else
+                    max = num3;
+                document.getElementById("result").innerHTML = `Largest number among ${num1}, ${num2} and ${num3} is: ${max}`;
+            }
+            else
+                document.getElementById("result").innerHTML = "Please enter positive numbers only.";
+        }
+    </script>
+
+</head>
+
+<body>
+    <p>Write a program to accept three positive numbers and output the largest among them</p>
+    <label for="num1">Numberr - 1 </label><input type="number" name="num1" id="num1"
+        placeholder="Enter first number"><br><br>
+    <label for="num1">Numberr - 2 </label><input type="number" name="num2" id="num2"
+        placeholder="Enter second number"><br><br>
+    <label for="num1">Numberr - 3 </label><input type="number" name="num3" id="num3"
+        placeholder="Enter third number"><br><br>
+    <div id="result"></div><br>
+
+    <button type="button" name="action" id="action" onclick="findMax()">Find Max</button>
+</body>
+
+</html>

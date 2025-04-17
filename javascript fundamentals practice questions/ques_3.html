@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 3</title>
+    <script>
+        function printEven() {
+            var number = parseInt(document.getElementById("num").value);
+            var result = "";
+
+            var i = 0;
+            if(number<0){
+                document.getElementById("result").innerHTML = "Please enter a positive number.";
+                return;
+            }
+            while (i <= number) {
+                if (i % 2 == 0)
+                    result += i+"<br/>";
+                i++;
+            }
+
+            document.getElementById("result").innerHTML = result+"<br/>";
+        }
+
+    </script>
+</head>
+
+<body>
+    <p>Write a function to list all even numbers less than or equal to the number n. <br>Take the value of n as input
+        from user. Use while loop.</p>
+
+    <label for="num">Enter number: </label>
+    <input type="number" name="num" id="num" required>
+    <button type="button" onclick="printEven()">Print</button>
+    <div id="result"></div>
+</body>
+
+</html>

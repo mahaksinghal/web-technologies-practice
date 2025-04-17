@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 4</title>
+    <script>
+        function calValue() {
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+            var operator = document.getElementById("operator").value;
+            console.log(operator);
+            var result = 0;
+            var op = document.getElementById("operator");
+            var index = op.selectedIndex;
+            if (index == 0) {
+                document.getElementById("result").innerHTML = "Please select an operator";
+                return;
+            }
+            else {
+                switch (operator) {
+                    case "add":
+                        result = num1 + num2;
+                        break;
+                    case "sub":
+                        result = num1 - num2;
+                        break;
+                    case "mul":
+                        result = num1 * num2;
+                        break;
+                    case "div":
+                        if (num1 === 0 || num2 === 0) {
+                            alert("Cannot divide by zero")
+                            return;
+                        }
+                        else
+                            result = num1 / num2;
+                        break;
+                }
+            }
+            document.getElementById("result").innerHTML = "Result: " + result;
+        }
+    </script>
+</head>
+
+<body>
+    <p>Write a function that accepts two numbers and a operator like (+, -, *, /) from user <br> and performs the
+        appropriate operation indicated by the operator </p>
+    <label for="num1">Enter 1st Number</label>
+    <input type="number" name="num1" id="num1" required>
+    <br><br>
+    <label for="num2">Enter 2nd Number</label>
+    <input type="number" name="num2" id="num2" required>
+
+    <br><br>
+
+    <label for="operator">Enter Operator</label>
+    <select name="operator" id="operator">
+        <option value="test">---select one---</option>
+        <option value="add">+</option>
+        <option value="sub">-</option>
+        <option value="mul">*</option>
+        <option value="div">/</option>
+    </select>
+
+    <br><br>
+    <button type="button" onclick="calValue()">Perform</button>
+
+    <div id="result"></div>
+
+</body>
+
+</html>

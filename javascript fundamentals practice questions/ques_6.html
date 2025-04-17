@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 6</title>
+    <script>
+        function calSum(){
+            var number = parseInt(document.getElementById("num").value);
+            var result = 0;
+            while(number > 0) {
+                var digit = number % 10;
+                number = Math.floor(number / 10);
+                result += digit;
+            }
+
+            document.getElementById("result").innerHTML = "Sum of digits: " + result;
+        }
+    </script>
+</head>
+<body>
+    <p>Write a program to find the sum of digits of given five-digit number</p>
+    
+    <label for="num">Enter number</label>
+    <input type="number" name="num" id="num">
+    <br><br>
+
+    <button type="button" onclick="calSum()">Print</button>
+
+    <div id="result"></div>
+
+</body>
+</html>

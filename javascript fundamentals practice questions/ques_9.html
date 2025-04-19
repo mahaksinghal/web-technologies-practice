@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 9</title>
+    <script src="/scripts/jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#cal').click(function () {
+                var principal = parseInt($('#principal').val());
+                var rate = parseInt($('#rate').val());
+                var time = parseInt($('#time').val());
+                var ci = 0;
+                // console.log(Math.pow((1 +(rate / 100)), time))
+                ci = principal * (Math.pow((1 +(rate / 100)), time)) - principal;
+
+                $('#result').val(ci);
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <p>Create a web page to calculate the compound interest</p>
+
+    Principal: <input type="number" name="principal" id="principal">
+
+    <br><br>
+    Rate: <input type="number" name="rate" id="rate">
+
+    <br><br>
+    Time: <input type="number" name="time" id="time">
+
+    <br><br>
+
+    <button type="button" name="cal" id="cal">Calculate</button>
+
+    <br><br>
+    Result: <input type="text" name="result" id="result">
+</body>
+
+</html>

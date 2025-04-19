@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 8</title>
+    <script src="/scripts/jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#print').click(function () {
+                var num = parseInt($('#num').val());
+                var pow = parseInt($('#pow').val());
+                var result = 1;
+
+                for (let i = pow; i >= 1; i--) {
+                    result *= num;
+                }
+                // document.getElementById("result").value = result;
+                $('#result').val(result);
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <p>Write a function pow(x,y) that calculates x^y.</p>
+
+    <label for="num">Enter a number</label>
+    <input type="number" name="num" id="num">
+    <br><br>
+
+    <label for="pow">Enter a power</label>
+    <input type="number" name="pow" id="pow">
+    <br><br>
+
+    <button type="button" id="print">Print</button>
+    <br><br>
+
+    Result: <input type="text" name="result" id="result">
+
+</body>
+
+</html>

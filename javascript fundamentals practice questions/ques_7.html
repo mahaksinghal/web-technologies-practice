@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 7</title>
+    <script>
+        function min(){
+            var nums = document.getElementById("num").value;
+            console.log(nums)
+            var arr = document.getElementById("num").value.split(",").map(num => parseInt(num));
+            console.log(arr)
+
+            var min = arr[0];
+            for(let i in arr){
+                if(arr[i]<min)
+                min = arr[i];
+            }
+            console.log(min)
+
+            document.getElementById("result").innerHTML = "Min is "+ min;
+        }
+    </script>
+</head>
+<body>
+    <p>Write a program min() that takes any number of arguments and returns minimum number in the set of arguments <br>Dont use the math predefined object</p>
+
+    <label for="num">Enter numbers</label>
+    <input type="text" name="num" id="num" placeholder="comma separated values">
+
+    <br><br>
+    <button type="button" onclick="min()">Print</button>
+    <br><br>
+    <div id="result"></div>
+</body>
+</html>

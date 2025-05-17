@@ -6,7 +6,7 @@ function validatePassword(id, cid, errId){
     var pass = document.getElementById(id).value;
     var cpass = document.getElementById(cid).value;
     // to check if password and confirm password are not empty and not contain spaces and are matching
-    if(pass !== "" && cpass !== "" && pass.trim().length > 0 && cpass.trim().length > 0 && pass.trim() == cpass.trim()) {
+    if(pass !== "" && cpass !== "" && pass.trim().length > 0 && cpass.trim().length > 0 && pass.trim() === cpass.trim()) {
         //if true, clear the error message and return true (if all conditions are met)
         document.getElementById(errId).innerHTML = "";
         return true;

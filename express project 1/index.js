@@ -8,8 +8,12 @@ const PORT = 8000;
 app.use(express.urlencoded({ extended: false }));
 
 app.use((req, resp, next) => {
-    console.log("hello from middleware 1");
-    next();
+    fs.appendFile("log.txt", `\n${Date.now()}: ${req.method}`, 
+    (err, data) => {
+        console.log("hello from middleware 1");
+        next();
+    });
+
 })
 
 // Routes

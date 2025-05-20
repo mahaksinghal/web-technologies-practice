@@ -9,8 +9,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Routes
 app.get('/users', (req, resp) => {
-    const html = `
-    <ul>
+    const html = `<ul>
     ${users.map(user => `<li>${user.first_name}</li>`).join("")}
     </ul>`;
     resp.send(html);
